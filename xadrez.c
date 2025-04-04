@@ -8,7 +8,7 @@ int main() {
     // Nível Novato - Movimentação das Peças
     /* Sugestão: Declare variáveis constantes para representar o número de casas que 
     cada peça pode se mover.*/
-    int bispo_cor_preta = 0;
+    int bispo_cor_preta = 5;
     int torre_cor_preta = 1;
     int rainha_cor_preta = 1;
 
@@ -19,7 +19,7 @@ int main() {
      printf("BEM VINDO AO XADREZ\n\n\n");
      
      printf("Movimento do Bispo cor Preta\n\n");
-     for (int bispo_cor_preta = 0; bispo_cor_preta < 5; bispo_cor_preta++){
+     for (int i = 0; i < bispo_cor_preta; i++){
         printf("Bispo se movendo para: \n");
         printf("Cima\n");
         printf("Direita\n");
