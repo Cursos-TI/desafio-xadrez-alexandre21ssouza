@@ -11,14 +11,18 @@ int main() {
     int bispo_cor_preta = 5;
     int torre_cor_preta = 1;
     int rainha_cor_preta = 1;
+    int cavalo_cor_preta = 1;
 
     // Implementação de Movimentação do Bispo
     /* Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo
      em diagonal.*/
 
+   //Apresentação do jogo
      printf("BEM VINDO AO XADREZ\n\n\n");
      
+     //uso do for para representar o movimento
      printf("Movimento do Bispo cor Preta\n\n");
+
      for (int i = 0; i < bispo_cor_preta; i++){
         printf("Bispo se movendo para: \n");
         printf("Cima\n");
@@ -31,10 +35,11 @@ int main() {
     // Implementação de Movimentação da Torre
     /* Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre
      para a direita.*/
+
+     //Uso do While para representar o movimento
      printf("Movimento da Torre cor Preta\n\n");
 
      while (torre_cor_preta <= 5){
-      
       printf("Torre se movendo para: \n");
       printf("Direita\n");
       torre_cor_preta ++;
@@ -46,6 +51,8 @@ int main() {
     // Implementação de Movimentação da Rainha
     /* Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha
      para a esquerda.*/
+
+     //Uso do do-while para representar o movimento
      printf("Movimento da Rainha cor Preta\n\n");
 
      do{
@@ -60,6 +67,23 @@ int main() {
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
 
+    /*Uso do While para representar o movimento para a esquerda e um for para
+     representar o movimento para baixo*/
+     printf("Movimento do Cavalo cor preta:\n\n");
+
+     while(cavalo_cor_preta <= 1){
+         int movimento_baixo = 2;
+      for (int i = 1; i <= movimento_baixo; i++){
+         printf("Baixo\n");
+
+      }
+      printf("Esquerda\n");
+      cavalo_cor_preta++;
+     }
+     
+     printf("\n\n\n");
+
+     
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
     // Exemplo: Crie uma função recursiva para o movimento do Bispo.
