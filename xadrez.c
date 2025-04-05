@@ -9,19 +9,27 @@
 // Sugestão: Substitua as movimentações das peças por funções recursivas.
 // Exemplo: Crie uma função recursiva para o movimento do Bispo.
 
-//Função recursiva do Bispo
+//Função recursiva do Bispo + loops aninhados
 void bispoLoop(int b){
-   if (b > 0){
-      printf("Bispo se movendo para: \n");
-      printf("Cima\n");
-      printf("Direita\n");
+  if (b > 0) {
+  
+   for (int i = 0; i < 1; i++){
+    printf("Bispo se movendo para: \n");
+    printf("Cima\n");
 
-      //pega o valor da variável b e subtrai na chamada da recursividade por -1
-      bispoLoop(b - 1);
+    for (int j = 0; j < 1; j++) {
+    printf("Direita\n");
+    }  
 
    }
+   /*pega o valor da variável b e subtrai na chamada da recursividade por -1, quando b
+   chegar a 0, sai do loop. */
+     bispoLoop(b - 1);
+  }
    
   }
+
+
 
   //Função recursiva da Torre
   void torreLoop(int t){
@@ -29,11 +37,15 @@ void bispoLoop(int b){
       printf("Torre se movendo para: \n");
       printf("Direita\n");
 
-      //pega o valor da variável b e subtrai na chamada da recursividade por -1
+    /*pega o valor da variável b e subtrai na chamada da recursividade por -1, quando b
+   chegar a 0, sai do loop.
+   */
       torreLoop(t - 1);
    }
    
   }
+
+
 
  //Função recursiva da Torre
  void rainhaLoop(int r){
@@ -41,7 +53,9 @@ void bispoLoop(int b){
       printf("Rainha se movendo para: \n");
       printf("Esquerda\n");
 
-      //pega o valor da variável b e subtrai na chamada da recursividade por -1
+   /*pega o valor da variável b e subtrai na chamada da recursividade por -1, quando b
+   chegar a 0, sai do loop.
+   */
       rainhaLoop(r - 1);
 
    }
@@ -55,15 +69,15 @@ int main() {
     int bispo_cor_preta = 5;
     int torre_cor_preta = 5;
     int rainha_cor_preta = 8;
-    int cavalo_cor_preta = 1;
+    int cavalo_cor_preta = 2;
 
-   // Implementação de Movimentação do Bispo
-   /* Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo
-     em diagonal.*/
 
-   //Apresentação do jogo
-     printf("BEM VINDO AO XADREZ\n\n\n");
+   
+   //Boas-vindas do jogo 
+     printf("BEM-VINDO AO XADREZ\n\n\n");
+   
      
+   // Implementação de Movimentação do Bispo
    //Chamando a função recursiva para imprimir o movimento do Bispo
      printf("Movimento do Bispo cor Preta\n\n");
      bispoLoop(bispo_cor_preta);
@@ -73,51 +87,49 @@ int main() {
 
 
    // Implementação de Movimentação da Torre
-   /* Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre
-     para a direita.*/
-
    //Chamando a função recursiva para imprimir o movimento da Torre
      printf("Movimento da Torre cor Preta\n\n");
-     torreLoop(torre_cor_preta);
-
-     
+     torreLoop(torre_cor_preta);    
           
      printf("\n\n\n");
 
-   // Implementação de Movimentação da Rainha
-   /* Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha
-     para a esquerda.*/
 
+
+
+   // Implementação de Movimentação da Rainha
    //Chamando a função recursiva para imprimir o movimento da Rainha
      printf("Movimento da Rainha cor Preta\n\n");
      rainhaLoop(rainha_cor_preta);
 
      printf("\n\n\n");
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
 
-    /*Uso do While para representar o movimento para a esquerda e um for para
-     representar o movimento para baixo*/
+
+
+    // Implementação de Movimentação do Cavalo
+    /*Uso do loop com múltiplas variáveis, com continue e break para controlar o fluxo de
+     execução, para representar o movimento da peça Cavalo. O movimento para cima duas 
+     vezes e um para direita, utilizando loops aninhados. 
+    direita*/
      printf("Movimento do Cavalo cor preta:\n\n");
 
-     while(cavalo_cor_preta <= 1){
-         int movimento_baixo = 2;
-      for (int i = 1; i <= movimento_baixo; i++){
-         printf("Baixo\n");
+    for (int i = 0, j = 3; i <= cavalo_cor_preta && j >= 0; i++, j--){
+        if(i < 2){
+          printf("Cima\n");
+          continue;
+        
+        }
+        if (j == 1){
+          printf("direita\n");
+           break;
+           
+        }
 
-      }
-      printf("Esquerda\n");
-      cavalo_cor_preta++;
-     }
+    }
+    
      
      printf("\n\n\n");
 
-     
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
 
     return 0;
 }
