@@ -63,9 +63,8 @@ void bispoLoop(int b){
  }
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    /* Sugestão: Declare variáveis constantes para representar o número de casas que 
-    cada peça pode se mover.*/
+ 
+//Declaração de variáveis
     int bispo_cor_preta = 5;
     int torre_cor_preta = 5;
     int rainha_cor_preta = 8;
